@@ -6,6 +6,8 @@ ARG IMAGICK_VERSION=3.7.0
 # ==============================================================================
 FROM php:${PHP_VERSION} AS builder
 
+ARG IMAGICK_VERSION
+
 RUN apk add --no-cache \
     $PHPIZE_DEPS \
     icu-dev \
