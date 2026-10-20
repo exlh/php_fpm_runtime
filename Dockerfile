@@ -51,7 +51,8 @@ RUN apk add --no-cache \
     libzip \
     libpng \
     libjpeg-turbo \
-    freetype
+    freetype \
+    tzdata
 
 COPY --from=builder /usr/local/lib/php/extensions/ /usr/local/lib/php/extensions/
 COPY --from=builder /usr/local/etc/php/conf.d/ /usr/local/etc/php/conf.d/
